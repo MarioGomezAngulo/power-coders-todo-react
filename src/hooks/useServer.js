@@ -10,8 +10,8 @@ function useServer() {
       setUser({ ...data });
     }
 
-    if (error.status === 401) {
-      toast.error('El usuario o la contraseña es incorrecta');
+    if (error && error.status === 401) {
+      toast.error('Username or Password is incorrect ');
     } else {
       if (error) {
         toast.error(error.message);
